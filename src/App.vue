@@ -1,16 +1,20 @@
 <template>
     <v-app>
-        <Login></Login>
+        <div></div>
     </v-app>
 </template>
 
 <script>
-    import Login from "@/components/Login";
 
     export default {
         name: 'App',
-        components: {
-            Login
+        created() {
+            this.isLogin();
+        },
+        methods: {
+            isLogin() {
+                this.$router.push('/login')
+            }
         }
     }
 </script>

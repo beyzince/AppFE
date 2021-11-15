@@ -1,5 +1,8 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
+import Login from "@/components/Login";
+import EmpRegister from "@/components/EmpRegister";
+import DevRegister from "@/components/DevRegister";
 
 Vue.use(Vuex);
 
@@ -24,6 +27,11 @@ const store = new Vuex.Store({
     getters,
     mutations,
     actions,
+    modules: {
+        Login,
+        EmpRegister,
+        DevRegister
+    }
 });
 
 export default store;
