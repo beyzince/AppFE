@@ -1,8 +1,7 @@
 <template>
-    <div id="app">
-        <img alt="Vue logo" src="./assets/logo.png">
+    <v-app>
         <Login></Login>
-    </div>
+    </v-app>
 </template>
 
 <script>

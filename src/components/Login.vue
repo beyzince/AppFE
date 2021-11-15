@@ -9,11 +9,15 @@
                  type="password"
                  hide-details="auto"
         ></v-text-field>
-        <v-button type="button" v-on:click="login()">Login</v-button>
+        <v-btn depressed color="primary" v-on:click="login()">Login
+        </v-btn>
     </div>
 </template>
 
 <script>
+    import {router} from "@/main";
+    import axios from 'axios'
+
     export default {
         data() {
             return {
@@ -22,8 +26,9 @@
         },
         name: "Login",
         methods: {
-            login() {
-
+            async login() {
+                await axios.get('api/companies/');
+                router.push('/empRegister')
             }
         }
     }
